@@ -8,7 +8,7 @@ const HomeScreen = ({navigation}) => (
         <View style={styles.container1}>
             <Image 
                 style={styles.img}
-                source={require('../src/assets/icons/Kuku.jpeg')}
+                source={require('../src/assets/icons/circled-k.png')}
             />
         </View>
         <View style={styles.container2}>
@@ -23,19 +23,20 @@ export default HomeScreen;
     safe:{
         width:'100%',
         height:'100%',
+        backgroundColor:'#F0EBE1',
       },
     container1: {
       flex: 0.6,
-      backgroundColor: '#FFF',
+      backgroundColor: '#F0EBE1',
       alignItems: 'center',
       justifyContent: 'center',
     },
     container2: {
         flex: 0.4,
-        backgroundColor: '#FFF',
+        backgroundColor: '#F0EBE1',
       },
       img: {
-          width:180,
+          width:300,
           height: 280
       }
   });

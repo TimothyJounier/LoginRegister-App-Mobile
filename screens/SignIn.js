@@ -47,6 +47,7 @@ export default SignIn;
       ctn: {
         width:'100%',
         height:'100%',
+        backgroundColor:'#F0EBE1'
       },
       container1: {
         width:'100%',
