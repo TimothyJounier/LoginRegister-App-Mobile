@@ -1,8 +1,7 @@
 import  React from 'react';
-import { Button } from 'react-native-paper';
-import { SafeAreaView, StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import SignIn from '../../screens/SignIn';
+
 
 const BtnLogin = ({navigation}) => (
         <View style={styles.container}>
@@ -14,7 +13,7 @@ const BtnLogin = ({navigation}) => (
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.Button2} 
-                    sonPress={() => alert('Pressed')}
+                    onPress={() => navigation.navigate('SignUp')}
                 >
                     <Text style={styles.text}>S'INSCRIRE</Text>
                 </TouchableOpacity>
@@ -32,7 +31,7 @@ const styles = StyleSheet.create ({
     Button1: {
         backgroundColor:'black',
         width: 300,
-        height: 70,
+        height: 50,
         marginBottom: 20,
         justifyContent:'center',
         alignItems: 'center',
@@ -48,7 +47,7 @@ const styles = StyleSheet.create ({
     Button2: {
         backgroundColor:'black',
         width: 300,
-        height: 70,
+        height: 50,
         marginBottom: 20,
         borderWidth: 1,
         borderColor: 'black',

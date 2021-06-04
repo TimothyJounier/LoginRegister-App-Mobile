@@ -5,12 +5,16 @@ import BtnLogin from '../src/components/Btn1';
 
 const HomeScreen = ({navigation}) => (
     <SafeAreaView style={styles.safe}>
+
+        {/* container image */}
         <View style={styles.container1}>
             <Image 
                 style={styles.img}
                 source={require('../src/assets/icons/circled-k.png')}
             />
         </View>
+
+        {/* container Bouton */}
         <View style={styles.container2}>
             <BtnLogin navigation={navigation}/>
         </View>

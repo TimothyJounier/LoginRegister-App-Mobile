@@ -1,39 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Text, StyleSheet, View, Image, TouchableOpacity , TextInput} from 'react-native';
 
 const SignIn = ({navigation}) => (
 
+    // Container principal
         <View style={styles.ctn}>
+
+            {/* container image */}
             <View style={styles.container1}>
                 <Image 
                 style={styles.img}
                 source={require('../src/assets/icons/Se.png')}
                 />
             </View>
+
+            {/* container champs */}
             <View style={styles.container2}>
                 <Text style={styles.text2}>Email</Text>
                     <TextInput
                         style={styles.input}
                         placeholder="Entrez votre Email"
-                     />
-                     <Text style={styles.text2}>Mot de Passe</Text>
+                    />
+                    <Text style={styles.text2}>Mot de Passe</Text>
                     <TextInput
                         style={styles.input}
                         placeholder="Entrez votre mot de passe"
-                     />
+                    />
                 </View>
+
+                {/* container Bouton */}
             <View style={styles.container3}>
                 <TouchableOpacity 
                     style={styles.btn} 
                     onPress={() => alert('Press')}
                 >
-            <Text style={styles.text}>Se connecter</Text>
-    </TouchableOpacity>
-    <Text style={styles.text3}>Vous n'avez pas de compte? </Text>
-    <TouchableOpacity
+                    <Text style={styles.text}>Se connecter</Text>
+                </TouchableOpacity>
+                    <Text style={styles.text3}>Vous n'avez pas de compte? </Text>
+                <TouchableOpacity
                     style={styles.Button1} 
-                    sonPress={() => alert('Pressed')}
+                    onPress={() => navigation.navigate('SignUp')}
                 >
                     <Text style={styles.inscription}>Inscription</Text>
                 </TouchableOpacity>
@@ -42,32 +48,32 @@ const SignIn = ({navigation}) => (
 )
 
 export default SignIn;
-  
-  const styles = StyleSheet.create({
-      ctn: {
+
+const styles = StyleSheet.create({
+    ctn: {
         width:'100%',
         height:'100%',
         backgroundColor:'#F0EBE1'
-      },
-      container1: {
+    },
+    container1: {
         width:'100%',
         height:'33%',
         justifyContent:'center',
         alignItems:'center',
-      },
-      container2: {
+    },
+    container2: {
         width:'100%',
         height:'33%',
         justifyContent:'center',
         alignItems:'center',
-      },
-      container3: {
+    },
+    container3: {
         width:'100%',
         height:'33%',
         justifyContent:'center',
         alignItems:'center',
-      },
-      btn: {
+    },
+    btn: {
         justifyContent:'center',
         alignItems:'center',
         backgroundColor:'black',
@@ -89,6 +95,7 @@ export default SignIn;
     text2: {
         marginTop:26,
         marginBottom: 10,
+        fontSize: 18,
     },
     text3: {
         marginTop:26
@@ -119,4 +126,4 @@ export default SignIn;
         fontWeight:'bold',
         textDecorationLine:'underline'
     },
-  });
+});
